@@ -129,7 +129,7 @@
      alert('Slaptažodis teisingas!');
     else
       {
-      window.location='https://plug.dj/uz-lietuva-';
+      window.location='https://plug.dj/geriausieji';
       };
 */
     
@@ -372,7 +372,7 @@
             fbLink: null,
             discordLink: 'https://discord.gg/WweWS5t',
             twitter: null,
-            intervalMessages: ['@staff Visi prisijungę administratoriai taip pat ir RDJ turi būti prisijungę ir DISCORD programoje Discord: https://goo.gl/3GL7QT'],
+            intervalMessages: ['Mūsų Discord: https://discord.gg/WweWS5t Nepamiršk apsilankyti!'],
             messageInterval: 4,
             songstats: true,
             commandLiteral: '!',
@@ -383,7 +383,7 @@
             }
         },
         room: {
-            name: "Už Lietuvą",
+            name: "Geriausieji",
             chatMessages: [],
             users: [],
             afkList: [],
