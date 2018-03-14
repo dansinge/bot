@@ -196,39 +196,6 @@
         });
     };
 
-    var retrieveSettings = function() {
-        var settings = JSON.parse(localStorage.getItem('basicBotsettings'));
-        if (settings !== null) {
-            for (var prop in settings) {
-                basicBot.settings[prop] = settings[prop];
-            }
-        }
-    };
-
-    var retrieveFromStorage = function() {
-        var info = localStorage.getItem('basicBotStorageInfo');
-        if (info === null) API.chatLog(basicBot.chat.nodatafound);
-        else {
-            var settings = JSON.parse(localStorage.getItem('basicBotsettings'));
-            var room = JSON.parse(localStorage.getItem('basicBotRoom'));
-            var elapsed = Date.now() - JSON.parse(info).time;
-            if ((elapsed < 1 * 60 * 60 * 1000)) {
-                API.chatLog(basicBot.chat.retrievingdata);
-                for (var prop in settings) {
-                    basicBot.settings[prop] = settings[prop];
-                }
-                basicBot.room.users = room.users;
-                basicBot.room.afkList = room.afkList;
-                basicBot.room.historyList = room.historyList;
-                basicBot.room.mutedUsers = room.mutedUsers;
-                //basicBot.room.autoskip = room.autoskip;
-                basicBot.room.roomstats = room.roomstats;
-                basicBot.room.messages = room.messages;
-                basicBot.room.queue = room.queue;
-                basicBot.room.newBlacklisted = room.newBlacklisted;
-                API.chatLog(basicBot.chat.datarestored);
-            }
-        }
         var json_sett = null;
         var roominfo = document.getElementById('room-settings');
         info = roominfo.textContent;
