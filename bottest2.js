@@ -307,8 +307,8 @@
         cmdLink: 'https://git.io/v6DGa',
         chat: null,
         loadChat: loadChat,
-        retrieveSettings: retrieveSettings,
-        retrieveFromStorage: retrieveFromStorage,
+        retrieveSettings: null,
+        retrieveFromStorage: null,
         settings: {
             botName: 'Dack Janiels v.2.4',
             language: 'english',
